@@ -2,16 +2,19 @@
 <html>
 <head>
     <title>알림장</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>알림장 웹페이지</h1>
-    <form action="/login" method="post">
-        <input type="text" name="class" id="class" required>
-        <label for="student">학생:</label>
-        <input type="text" name="student" id="student" required>
+    <h1>알림장</h1>
+    <form action="/index2" method="post">
+        <label for="student_id">학번:</label>
+        <input type="text" id="student_id" name="student_id"><br>
+
         <label for="password">비밀번호:</label>
-        <input type="password" name="password" id="password" required>
-        <input type="submit" value="로그인">
+        <input type="password" id="password" name="password"><br>
+
+        <input type="submit" value="확인">
     </form>
 </body>
 </html>
+
