@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>알림장</title>
+    <title>학교 알림장</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- 학교 아이콘 추가 -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='school_icon.png') }}">
 </head>
 <body>
-    <h1>알림장</h1>
-    <form action="/index2.html" method="post"> <!-- 수정된 부분 -->
-        <label for="student_id">학번:</label>
-        <input type="text" id="student_id" name="student_id"><br>
+    <div class="login-box">
+        <img src="{{ url_for('static', filename='school_logo.png') }}" class="school-logo" alt="School Logo">
+        <h1>학교 알림장</h1>
+        <form action="/index2.html" method="post">
+            <label for="student_id">학번:</label>
+            <input type="text" id="student_id" name="student_id" required>
 
-        <label for="password">비밀번호:</label>
-        <input type="password" id="password" name="password"><br>
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" required>
 
-        <input type="submit" value="확인">
-    </form>
-    {% if error %}
-    <p class="error-message">{{ error }}</p>
-    {% endif %}
+            <input type="submit" value="로그인">
+        </form>
+        {% if error %}
+        <p class="error-message">{{ error }}</p>
+        {% endif %}
+    </div>
 </body>
 </html>
