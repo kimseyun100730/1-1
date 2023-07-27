@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>알림장</title>
-     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>알림장</h1>
-    <form action="../1-1/index2.html" method="post">
+    <form action="/index2.html" method="post">
         <label for="student_id">학번:</label>
         <input type="text" id="student_id" name="student_id"><br>
 
@@ -15,6 +15,8 @@
 
         <input type="submit" value="확인">
     </form>
+    {% if error %}
+    <p class="error-message">{{ error }}</p>
+    {% endif %}
 </body>
 </html>
-
