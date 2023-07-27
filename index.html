@@ -4,13 +4,13 @@
     <title>학교 알림장</title>
     <link rel="stylesheet" href="style.css">
     <!-- 학교 아이콘 추가 -->
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='school_icon.png') }}">
+    <link rel="icon" href="다운로드.jpg">
 </head>
 <body>
     <div class="login-box">
-        <img src="{{ url_for('static', filename='school_logo.png') }}" class="school-logo" alt="School Logo">
+        <img src="다운로드.jpg" class="school-logo" alt="School Logo">
         <h1>학교 알림장</h1>
-        <form action="/index2.html" method="post">
+        <form action="../index2.html" method="post">
             <label for="student_id">학번:</label>
             <input type="text" id="student_id" name="student_id" required>
 
